@@ -1,0 +1,353 @@
+.message {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+/* =========================
+   MESSAGE AVATAR
+========================= */
+
+.message-avatar {
+  width: 36px;
+  min-width: 36px;
+  height: 36px;
+
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* BETSY */
+
+.ai-message .message-avatar {
+  background: #182235;
+  color: #ffffff;
+
+  font-size: 17px;
+}
+
+/* USER */
+
+.user-message .message-avatar {
+  background: #e8edf3;
+  color: #3e4858;
+}
+
+/* =========================
+   MESSAGE CONTENT
+========================= */
+
+.message-content {
+  max-width: calc(100% - 48px);
+  min-width: 0;
+}
+
+/* =========================
+   NAME
+========================= */
+
+.message-name {
+  margin: 1px 0 6px;
+
+  color: #8995a5;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* BETSY NAME */
+
+.ai-message .message-name {
+  color: #aeb9c7;
+}
+
+/* USER NAME */
+
+.user-message .message-name {
+  color: #8995a5;
+}
+
+/* =========================
+   MESSAGE TEXT
+========================= */
+
+.message-text {
+  color: #dbe3ec;
+
+  font-size: 14px;
+  line-height: 1.65;
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* BETSY TEXT */
+
+.ai-message .message-text {
+  color: #dbe3ec !important;
+}
+
+/* USER TEXT */
+
+.user-message .message-text {
+  color: #263143;
+}
+
+/* =========================
+   PARAGRAPHS
+========================= */
+
+.message-text p {
+  margin: 0 0 10px;
+  color: inherit;
+}
+
+.message-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+
+.message-text h1,
+.message-text h2,
+.message-text h3,
+.message-text h4 {
+  color: #ffffff;
+
+  margin: 14px 0 8px;
+
+  line-height: 1.35;
+}
+
+.message-text h1 {
+  font-size: 20px;
+}
+
+.message-text h2 {
+  font-size: 18px;
+}
+
+.message-text h3 {
+  font-size: 16px;
+}
+
+.message-text h4 {
+  font-size: 14px;
+}
+
+/* =========================
+   BOLD
+========================= */
+
+.message-text strong,
+.message-text b {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* =========================
+   ITALIC
+========================= */
+
+.message-text em,
+.message-text i {
+  color: #c5cfda;
+}
+
+/* =========================
+   LIST
+========================= */
+
+.message-text ul,
+.message-text ol {
+  padding-left: 22px;
+
+  margin: 8px 0;
+
+  color: #dbe3ec;
+}
+
+.message-text li {
+  margin-bottom: 5px;
+  color: #dbe3ec;
+}
+
+/* =========================
+   INLINE CODE
+========================= */
+
+.message-text code {
+  background: #202a36;
+
+  color: #e8edf3;
+
+  padding: 2px 6px;
+
+  border-radius: 4px;
+
+  font-size: 12px;
+}
+
+/* =========================
+   CODE BLOCK
+========================= */
+
+.message-text pre {
+  background: #111820;
+
+  color: #e6edf5;
+
+  border: 1px solid #293442;
+
+  padding: 14px;
+
+  border-radius: 8px;
+
+  overflow-x: auto;
+
+  margin: 10px 0;
+}
+
+.message-text pre code {
+  background: transparent;
+  color: #e6edf5;
+
+  padding: 0;
+
+  font-size: 12px;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.message-text table {
+  border-collapse: collapse;
+
+  width: 100%;
+
+  margin: 10px 0;
+
+  color: #dbe3ec;
+}
+
+.message-text th,
+.message-text td {
+  border: 1px solid #303b48;
+
+  padding: 7px 9px;
+
+  text-align: left;
+}
+
+.message-text th {
+  background: #18212c;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.message-text td {
+  background: #111820;
+  color: #dbe3ec;
+}
+
+/* =========================
+   BLOCKQUOTE
+========================= */
+
+.message-text blockquote {
+  margin: 10px 0;
+
+  padding: 8px 12px;
+
+  border-left: 3px solid #65758a;
+
+  color: #b9c4d0;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+.message-text a {
+  color: #79a9ff;
+  text-decoration: none;
+}
+
+.message-text a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   USER MESSAGE
+========================= */
+
+.user-message .message-text {
+  background: #edf1f5;
+
+  color: #263143 !important;
+
+  padding: 10px 13px;
+
+  border-radius: 4px 12px 12px 12px;
+}
+
+/* User markdown */
+
+.user-message .message-text p,
+.user-message .message-text li {
+  color: #263143 !important;
+}
+
+.user-message .message-text strong,
+.user-message .message-text b {
+  color: #172033 !important;
+}
+
+/* =========================
+   AI MESSAGE BOX
+========================= */
+
+.ai-message .message-text {
+  background: transparent;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .message {
+    gap: 9px;
+  }
+
+  .message-avatar {
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+
+    border-radius: 8px;
+  }
+
+  .message-content {
+    max-width: calc(100% - 41px);
+  }
+
+  .message-text {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .message-text table {
+    display: block;
+    overflow-x: auto;
+  }
+}
