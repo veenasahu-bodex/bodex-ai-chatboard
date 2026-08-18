@@ -340,7 +340,6 @@ function ChatWindow({ chat, updateChat }) {
                             )
                           }
                         >
-
                           {copiedId ===
                           message.id ? (
                             <>
