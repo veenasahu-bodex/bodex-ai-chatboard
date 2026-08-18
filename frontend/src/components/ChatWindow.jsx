@@ -8,7 +8,7 @@ import InputBox from "./InputBox";
 import Message from "./Message";
 import "./ChatWindow.css";
 
-const API = "https://bodex-ai-chatboard.onrender.com";
+const API = import.meta.env.VITE_API_URL;
 
 const suggestions = [
   "What is BODEX?",
