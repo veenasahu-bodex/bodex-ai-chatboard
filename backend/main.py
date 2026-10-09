@@ -18,9 +18,9 @@ load_dotenv()
 
 
 # CONFIG
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
-MODEL = "qwen/qwen3.6-27b"
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+MODEL = "openai/gpt-oss-20b"
 
 MAX_FILE_SIZE = 20 * 1024 * 1024
 
@@ -970,7 +970,7 @@ async def chat(
                     messages=messages,
                     temperature=0.7,
                     max_completion_tokens=1200,
-                    reasoning_effort="none",
+                    reasoning_effort="low",
                     reasoning_format="hidden",
                     stream=False
                 )
@@ -1035,7 +1035,7 @@ async def chat(
                     messages=messages,
                     temperature=0.7,
                     max_completion_tokens=1200,
-                    reasoning_effort="none",
+                    reasoning_effort="low",
                     reasoning_format="hidden",
                     stream=False
                 )

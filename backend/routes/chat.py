@@ -15,9 +15,7 @@ class ChatMessage(BaseModel):
 class ChatRequest(BaseModel):
 
     message: str
-
     context: str = ""
-
     history: list[ChatMessage] = []
 
 
@@ -64,13 +62,10 @@ FILE CONTENT:
         )
 
     # Previous conversation
-
     if request.history:
 
         history_text = ""
-
         for item in request.history[-10:]:
-
             history_text += (
                 f"{item.role.upper()}: "
                 f"{item.content}\n"
@@ -85,7 +80,6 @@ Previous conversation:
         )
 
     # Current question
-
     prompt_parts.append(
         f"""
 USER QUESTION:
@@ -97,19 +91,14 @@ Answer the user now.
     )
 
     prompt = "\n".join(prompt_parts)
-
     try:
-
         answer = generate_response(prompt)
-
         return {
             "reply": answer
         }
 
     except Exception as error:
-
         print("CHAT ERROR:", error)
-
         raise HTTPException(
             status_code=500,
             detail=str(error)
